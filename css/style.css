@@ -6,6 +6,362 @@
 * AUTHOR URL: http://cssparty.com/
 */
 
-/*
-	YOUR STYLE HERE
-*/
+/*******************************************************
+********************* 1.RESET
+*******************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, video, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+button{
+	outline: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*******************************************************
+********************* 2.GENERAL SETTINGS 
+*******************************************************/
+html{
+	height: 100%;
+	width: 100%;
+	float: left;
+}
+body{
+	background: #ffffff;
+	color: #888;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+a{
+	color: #333333;
+	text-decoration: none;
+	-webkit-transition: color 0.4s, background 0.4s;
+    -moz-transition:    color 0.4s, background 0.4s;
+    -o-transition:      color 0.4s, background 0.4s;
+    transition:         color 0.4s, background 0.4s;
+}
+a,p{
+	font-size: 1.02em;
+}
+h1, h2, h3, h4, h5, h6{
+	line-height: 140%;
+	color: #444444;
+	font-weight: 400;
+}
+h1{
+	font-size:2.2em;
+	margin: 0 0 30px;
+	margin-bottom:20px;
+}
+h2{
+	font-size:1.9em;
+	margin-bottom:20px;
+}
+h3{
+	font-size:1.5em;
+	margin-bottom:10px;
+}
+h4{
+	font-size:1.2em;
+	margin-bottom:10px;
+}
+h5{
+	font-size:1em;
+	margin-bottom:10px;
+}
+h6{
+	font-size:.9em;
+	margin-bottom:4px;
+}
+p{
+	line-height: 170%;
+	margin: 0px 0px 20px;
+}
+img{
+	display: block;
+}
+section{
+	width: 100%;
+	float: left;
+	padding: 100px 0;
+	position: relative;
+}
+/* inputs*/
+textarea, input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"]{
+	background-color: #ffffff;
+	border: 1px solid #e7e7e7;
+	color: #666666;
+	font-size: 1em;
+	text-indent: 10px;
+	outline: none;
+	width: 100%;
+}
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"]{
+	height: 40px;
+}
+textarea{
+	resize: none;
+	overflow: auto;
+	margin-bottom: 10px;
+	padding: 10px 0;
+}
+select{
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	color: #888;
+	height: 40px;
+	width: 100%;
+	padding: 8px 10px;
+	outline: none;
+}
+select:hover,
+select:active,
+select:focus
+{
+	color: #222;
+	border-color: #222;
+}
+/*******************************************************
+********************* 3.LAYOUTS
+*******************************************************/
+.container{
+	width: 1160px;
+	margin: 0 auto; /* MARGIN TOP AND BOTTOM ZERO MARGIN LEFT & RIGHT AUTO TO BE CENTERED*/
+	padding: 0 20px;
+}
+.section-title{
+	color: #af30dd;
+	font-size: 2.6em;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.btn{
+	background: #af30dd;
+	border-radius: 60px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.1em;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 10px 14px;
+}
+/*******************************************************
+********************* 4.THE HEADER 
+*******************************************************/
+header {
+	background: #af30dd;
+	box-shadow: 0 0 20px 1px rgba(0,0,0,.1);
+	width: 100%;
+	height: 70px;
+}
+.logo{
+	background: transparent url('../images/logo.png') no-repeat;
+	display: block;
+	float: left;
+	width: 185px;
+	height: 70px;
+	margin: 0;
+	text-indent: -9999px;
+}
+.primary-nav{
+	float: right;
+}
+.primary-nav>ul>li{
+	height: 70px;
+	line-height: 70px;
+	margin-left: 20px;
+	display: inline-block;
+}
+.primary-nav>ul>li>a{
+	color: #fff;
+	font-weight: 600;
+}
+/*******************************************************
+********************* 5.INTRO
+*******************************************************/
+.intro{
+	background: #333333 url('../images/bg.jpg') center center no-repeat;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	text-align: center;
+  	padding: 150px 0;
+}
+.intro-title{
+	color: #fff;
+	font-size: 3em;
+	font-weight: 600;
+}
+.intro-subtitle{
+	color: #fff;
+	font-size: 1.3em;
+	line-height: 160%;
+}
+/*******************************************************
+********************* 6.SERVICES
+*******************************************************/
+.service-item{
+	width: 33.3333%;
+	float: left;
+	padding: 20px;
+	text-align: center;
+}
+.service-image{
+	background: #af30dd;
+	border-radius: 100%;
+	width: 90px;
+	height: 90px;
+	margin: 0 auto 30px auto;
+	text-align: center;
+}
+.service-image img{
+	display: inline;
+	margin-top: 15px;
+}
+.service-title{
+	font-weight: 600;
+}
+/*******************************************************
+********************* 8.BLOG
+*******************************************************/
+.blog{
+	background: #222;
+}
+.blog-article{
+	color: #fff;
+	width: 50%;
+	float: left;
+	padding: 20px;
+	text-align: center;
+}
+.blog-article-image img{
+	border-radius: 5px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.blog-article-title a{
+	font-weight: 600;
+	font-size: 1.1em;
+	color: #af30dd;
+}
+.read-more{
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+	text-align: center;
+}
+/*******************************************************
+********************* 9.CONTACT
+*******************************************************/
+.contact-infos,
+.contact-form {
+	width: 50%;
+	float: left;
+}
+.info-row{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+}
+.info-row h4{
+	color: #af30dd;
+	font-weight: 800;
+}
+.input-holder{
+	margin-bottom: 20px;
+	width: 100%;
+	float: left;
+}
+.input-holder input{
+	width: 48%;
+	float: left;
+}
+.input-holder input:last-child{
+	float: right;
+}
+.contact-form input,
+.contact-form textarea{
+	border-radius: 5px;
+	box-shadow: 0 2px 20px rgba(0,0,0,.1);
+}
+.contact-form textarea{
+	height: 100px;
+}
+.message-btn{
+	float: right;
+}
+/*******************************************************
+********************* 10.FOOTER
+*******************************************************/
+footer{
+	border-top: 1px solid #ddd;
+	height: 70px;
+	width: 100%;
+	float: left;
+}
+.footer-logo{
+	background: transparent url('../images/logo-footer.png') no-repeat;
+	display: block;
+	float: left;
+	width: 185px;
+	height: 70px;
+	margin: 0;
+	text-indent: -9999px;
+}
+footer p{
+	float: right;
+	display: inline-block;
+	height: 70px;
+	line-height: 70px;
+	margin: 0;
+}
